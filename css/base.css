@@ -1,4 +1,3 @@
-@import url("https://use.typekit.net/std3xut.css");
 article,
 aside,
 details,
@@ -182,7 +181,7 @@ body {
   --color-link: #000;
   --color-link-hover: #000;
   --color-info: #000;
-  font-family: "brother-1816", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   min-height: 100vh;
   color: #57585c;
   color: var(--color-text);
