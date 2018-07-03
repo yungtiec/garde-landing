@@ -44,7 +44,7 @@
 					<div class="grid__item-content">
 						<nav class="menu">
 							<button class="btn btn--close"><i class="material-icons">close</i></button>
-							<ul class="menu__inner">
+							<ul class="menu__inner" id="menu__inner">
 								<li class="menu__item"><a class="menu__link" href="#">get certified</a></li>
 								<li class="menu__item"><a class="menu__link" href="#">earn bounty</a></li>
 								<li class="menu__item"><a class="menu__link" href="#">view listing</a></li>
@@ -114,10 +114,10 @@
 
 		(function() {
 			// Fake loading.
-			setTimeout(init, 1000);
+			setTimeout(init, 2000);
 
 			function init() {
-				document.body.classList.remove('loading');
+				document.getElementById("menu__inner").style.display = "flex"
 
 				var navEl = document.querySelector('nav.menu'),
 				revealer = new RevealFx(navEl),
@@ -168,7 +168,7 @@
 					rev5 = new RevealFx(document.querySelector('#rev-5'), {
 						revealSettings : {
 							bgcolor: '#ec6a6b',
-							delay: 250,
+							delay: 200,
 							onCover: function(contentEl, revealerEl) {
 								contentEl.style.opacity = 1;
 							}
@@ -181,7 +181,7 @@
 						revealSettings : {
 							bgcolor: '#a9d1e4',
 							direction: 'rl',
-							delay: 250,
+							delay: 200,
 							onCover: function(contentEl, revealerEl) {
 								contentEl.style.opacity = 1;
 							}
@@ -193,7 +193,7 @@
 					rev9 = new RevealFx(document.querySelector('#rev-9'), {
 						revealSettings : {
 							bgcolor: '#141417',
-							delay: 250,
+							delay: 200,
 							onCover: function(contentEl, revealerEl) {
 								contentEl.style.opacity = 1;
 							}
