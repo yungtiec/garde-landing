@@ -3,31 +3,32 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Distortion Hover Effect | Codrops</title>
+		<title>Garde - Transparency Network</title>
 		<meta name="description" content="A little library that can be used for creating WebGL powered distortion hover effects using displacement images." />
-		<meta name="keywords" content="webgl, hover, effect, distortion, displacement, web development, three.js" />
+		<meta name="keywords" content="garde, cryptocurrency, ico, transparency, consensys, ethereum, token" />
 		<meta name="author" content="Codrops" />
 		<link rel="shortcut icon" href="favicon.ico">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
      <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/content.css" />
 		<link rel="stylesheet" type="text/css" href="css/revealer.css" />
 		<link rel="stylesheet" type="text/css" href="css/pater.css" />
-		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/landing.css" />
+		<link rel="stylesheet" type="text/css" href="css/card.css" />
 		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
 	</head>
 	<body class="loading">
 		<main>
 			<div class="message">Some message for mobile if needed.</div>
-			<div class="grid">
-				<div class="grid__item theme-1">
-					<div class="grid__item-content">
+			<section class="landing-grid">
+				<div class="landing-grid__item landing-grid--left">
+					<div class="landing-grid__item-content">
 						<img src="img/logo-4.png" alt="GARDE" width="170px" height="auto" />
-						<div class="grid__item-intro">
-							<h3 class="grid__item-subtitle">Token buyers are losing patience with poor and deceptive disclosures.
+						<div class="landing-grid__item-intro">
+							<h3 class="landing-grid__item-subtitle">Token buyers are losing patience with poor and deceptive disclosures.
 							</h3>
-							<h3 class="grid__item-subtitle">Garde Network offers projects a way to certify their disclosures and protect their customers.
+							<h3 class="landing-grid__item-subtitle">Garde Network offers projects a way to certify their disclosures and protect their customers.
 							</h3>
 							<form class="search-container">
 						    <input type="text" id="search-bar" placeholder="Find project scorecard">
@@ -37,12 +38,12 @@
 						</div>
 					</div>
 				</div>
-				<div class="grid__item grid__item--bg theme-2">
-					<div class="grid__item-img" data-displacement="img/displacement/10.jpg" data-intensity="-0.65" data-speedIn="1.2" data-speedOut="1.2">
+				<div class="landing-grid__item landing-grid__item--bg landing-grid--right">
+					<div class="landing-grid__item-img" data-displacement="img/displacement/10.jpg" data-intensity="-0.65" data-speedIn="1.2" data-speedOut="1.2">
 						<img src="img/scott-webb-272211-unsplash.jpg" alt="Image"/>
 						<img src="img/daniel-von-appen-276283-unsplash.jpg" alt="Image"/>
 					</div>
-					<div class="grid__item-content">
+					<div class="landing-grid__item-content">
 						<nav class="menu">
 							<button class="btn btn--close"><i class="material-icons">close</i></button>
 							<ul class="menu__inner" id="menu__inner">
@@ -55,37 +56,99 @@
 						<button class="btn btn--menu"><i class="material-icons">menu</i></button>
 					</div>
 				</div>
-			</div>
-			<section class="content content--full flexy section-1">
+			</section>
+			<section class="content content--full flexy section-certified" id="section-certified">
 				<h2 class="content__title content__title--medium">
-					<div class="content__title__inner">COMMIT TO</div><br/>
-					<div class="content__title__inner content__title__inner--offset-2">TRANSPARENCY</div>
 					<div id="rev-4" class="content__description">certify your disclosures</div>
+					<div class="content__title__inner">COMMIT TO TRANSPARENCY</div>
 					<div id="rev-5" class="content__paragraph">Transparency is the bedrock of a healthy crypto ecosystem. With Garde, token projects can leverage a community of experts to certify the quality and reliability of their disclosures. </div>
 				</h2>
-				<div id="rev-3" class="content__image-wrap content__image-wrap--half">
-					<!-- <img class="content__image" src="img/1.jpg" alt="Some image"/> -->
+			</section>
+			<section class="content flexy section-bounty bounty-grid">
+				<div class="bounty-box page-padding--left">
+					<h2 class="content__title content__title--small">
+						<div class="content__description">limited time only</div>
+						<div class="">EARN BOUNTY FOR REVIEWS</div>
+						<div id="rev-7" class="content__paragraph full-width">we are  giving out bounties for  in-depth reviews of disclosures.</div>
+						<div id="rev-8" class="content__paragraph full-width">Earn rewards by sucessfully submitting a “Transparency Scorecard”. A Transparency Scorecard is an objective, in-depth assessment of the disclosures provided by a token project.</div>
+					</h2>
+				</div>
+				<div class="bounty__inner-grid">
+					<div class="bounty-box--inner box--a"  id="box--a">
+						<div class="box-content">
+							<div class="bounty-project">Civic</div>
+							<div class="bounty-description">Community-curated Newsrooms</div>
+							<div class="bounty-action">expires in 12 days</div>
+						</div>
+					</div>
+					<div class="bounty-box--inner box--b"  id="box--b">
+						<div class="box-content">
+							<div class="bounty-project">virtue poker</div>
+							<div class="bounty-description">A decentralized P2P platform for poker</div>
+							<div class="bounty-action">expires in 20 days</div>
+						</div>
+					</div>
+					<div class="bounty-box--inner box--c"  id="box--c">
+						<div class="box-content">
+							<div class="bounty-project">ethereum</div>
+							<div class="bounty-description">Platform for running decentralized applications</div>
+							<div class="bounty-action">expires in 20 days</div>
+						</div>
+					</div>
+					<div class="bounty-box--inner box--d"  id="box--d">
+						<div class="box-content">
+							<div class="bounty-project">view more ></div>
+						</div>
+					</div>
 				</div>
 			</section>
-			<section class="content content--full flexy section-2">
-				<h2 class="content__title content__title--medium">
-					<div class="content__title__inner content__title__inner--offset-2">EARN BOUNTY FOR REVIEWS</div>
-					<div id="rev-7" class="content__paragraph">For a limited time, we are  giving out bounties for  in-depth reviews of disclosures.</div>
+			<section class="content flexy section-listing page-padding" id="section-listing">
+				<h2 class="content__title content__title--small">
+					<div class="content__title__inner">VIEW SCORECARDS</div>
+					<div id="rev-9" class="content__paragraph full-width">Educate yourself on tokens before buying them. What should one look for?<br/>We provide a new framework that makes it easier to evaluate the quality of a project’s disclosures.</div>
 				</h2>
-				<div id="rev-6" class="content__image-wrap content__image-wrap--half">
-					<!-- <img class="content__image" src="img/2.jpg" alt="Some image"/> -->
-				</div>
+				<ul class="cards">
+					<li class="cards_item">
+						<div class="card">
+							<div class="card_content">
+								<div class="bounty-project">Civic</div>
+								<div class="bounty-description">Community-curated Newsrooms</div>
+								<div class="bounty-action">expires in 12 days</div>
+							</div>
+						</div>
+					</li>
+					<li class="cards_item">
+						<div class="card">
+							<div class="card_content">
+								<div class="bounty-project">virtue poker</div>
+								<div class="bounty-description">A decentralized P2P platform for poker</div>
+								<div class="bounty-action">expires in 20 days</div>
+							</div>
+						</div>
+					</li>
+					<li class="cards_item">
+						<div class="card">
+							<div class="card_content">
+								<div class="bounty-project">ethereum</div>
+								<div class="bounty-description">Platform for running decentralized applications</div>
+								<div class="bounty-action">expires in 20 days</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<a class="link-item">View more ></a>
 			</section>
-			<section class="content content--full flexy flexy--row">
-				<h2 class="content__title content__title--medium content__title--half content__title--right">
-					<div id="rev-9" class="content__title__inner">Rawrrrrr</div><br/>
-					<div id="rev-10" class="content__title__inner content__title__inner--offset-2">Lorem Ipsum</div>
-				</h2>
-				<div id="rev-11" class="content__image-wrap content__image-wrap--half">
-					<!-- <img class="content__image" src="img/3.jpg" alt="Some image"/> -->
-				</div>
+			<section  class="page-padding-x page-padding-bottom">
+				<p class="">The Garde Network is an initiative by The Brooklyn Project</p>
 			</section>
 		</main>
+		<footer class="page-padding">
+			<div>Copyright © 2018 Garde Network</div>
+			<div class="logos">
+				<a  target="_blank" href="https://thebkp.com/"><img class="bkp-logo" src="img/bkp-logo.png" alt="the brooklyn project" /></a>
+				<a  target="_blank" href="http://www.consensys.net/"><img class="consensys-logo" src="img/consensys-logo-white-transparent.png" alt="consensys" /></a>
+			</div>
+		</footer>
 		<script src="js/imagesloaded.pkgd.min.js"></script>
 		<script src="js/three.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
@@ -98,7 +161,7 @@
 				document.body.classList.remove('loading');
 			});
 
-			Array.from(document.querySelectorAll('.grid__item-img')).forEach((el) => {
+			Array.from(document.querySelectorAll('.landing-grid__item-img')).forEach((el) => {
 				const imgs = Array.from(el.querySelectorAll('img'));
 				new hoverEffect({
 					parent: el,
@@ -153,6 +216,14 @@
 					});
 				}
 
+				var section1Elem = document.getElementById('section-certified'),
+					watcherSection1 = scrollMonitor.create(section1Elem, -50);
+					watcherSection1.enterViewport(function() {
+						if (navEl.classList.contains('menu--open')) {
+							closeMenu()
+						}
+					});
+
 				//************************ Example 2 - reveal on scroll ********************************
 
 				var scrollElemToWatch_1 = document.getElementById('rev-4'),
@@ -177,11 +248,35 @@
 					}),
 
 					scrollElemToWatch_2 = document.getElementById('rev-7'),
-					watcher_2 = scrollMonitor.create(scrollElemToWatch_2, -300),
-					rev7 = new RevealFx(document.querySelector('#rev-7'), {
+					watcher_2 = scrollMonitor.create(scrollElemToWatch_2),
+					boxA = new RevealFx(document.querySelector('#box--a'), {
 						revealSettings : {
 							bgcolor: '#a9d1e4',
-							direction: 'rl',
+							onCover: function(contentEl, revealerEl) {
+								contentEl.style.opacity = 1;
+							}
+						}
+					}),
+					boxB = new RevealFx(document.querySelector('#box--b'), {
+						revealSettings : {
+							bgcolor: '#2f3471c7',
+							delay: 200,
+							onCover: function(contentEl, revealerEl) {
+								contentEl.style.opacity = 1;
+							}
+						}
+					}),
+					boxC = new RevealFx(document.querySelector('#box--c'), {
+						revealSettings : {
+							bgcolor: '#32396e',
+							onCover: function(contentEl, revealerEl) {
+								contentEl.style.opacity = 1;
+							}
+						}
+					}),
+					boxD = new RevealFx(document.querySelector('#box--d'), {
+						revealSettings : {
+							bgcolor: '#a9d1e4',
 							delay: 200,
 							onCover: function(contentEl, revealerEl) {
 								contentEl.style.opacity = 1;
@@ -193,17 +288,8 @@
 					watcher_3 = scrollMonitor.create(scrollElemToWatch_3, -300),
 					rev9 = new RevealFx(document.querySelector('#rev-9'), {
 						revealSettings : {
-							bgcolor: '#141417',
+							bgcolor: '#fd8a8b',
 							delay: 200,
-							onCover: function(contentEl, revealerEl) {
-								contentEl.style.opacity = 1;
-							}
-						}
-					}),
-					rev10 = new RevealFx(document.querySelector('#rev-10'), {
-						revealSettings : {
-							bgcolor: '#141417',
-							delay: 500,
 							onCover: function(contentEl, revealerEl) {
 								contentEl.style.opacity = 1;
 							}
@@ -218,13 +304,17 @@
 				});
 				watcher_2.enterViewport(function() {
 					// rev6.reveal();
-					rev7.reveal();
+					boxA.reveal();
+					boxB.reveal();
+					boxC.reveal();
+					boxD.reveal();
+					// rev7.reveal();
 					// rev8.reveal();
 					watcher_2.destroy();
 				});
 				watcher_3.enterViewport(function() {
 					rev9.reveal();
-					rev10.reveal();
+					// rev10.reveal();
 					// rev11.reveal();
 					watcher_3.destroy();
 				});

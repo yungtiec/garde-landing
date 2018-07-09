@@ -1,0 +1,85 @@
+/*---------- CARDS LAYOUT ----------*/
+
+$card-background: #fff;
+$card-border-width: 1px;
+$card-border-color: #d0cfce;
+$card-radius: 0;
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.cards_item {
+  width: 100%;
+  height: 270px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  display: flex;
+  .no-flexbox & {
+    float: left;
+  }
+
+  margin-top: 0;
+  // > 640px, 2 items/row
+  @media screen and (min-width: 42em) and (max-width: 60em) {
+    width: 48%;
+    .no-flexbox &:nth-child(2n + 1) {
+      clear: both;
+    }
+  }
+
+  // > 960px, 3 items/row
+  @media screen and (min-width: 60em) {
+    width: 32%;
+    .no-flexbox &:nth-child(3n + 1) {
+      clear: both;
+    }
+  }
+
+  border: $card-border-width solid $card-border-color;
+  border-radius: $card-radius;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+
+  background-color: $card-background;
+}
+
+.card_image {
+  img {
+    width: 100%;
+    border-top-left-radius: ($card-radius - $card-border-width);
+    border-top-right-radius: ($card-radius - $card-border-width);
+  }
+}
+
+.card_content {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+
+  margin-top: 0;
+  padding: 1.5em;
+
+  position: relative;
+
+  p {
+    flex: 1 0 auto;
+  }
+  .bounty-action {
+    position: absolute;
+    bottom: 0px;
+  }
+}
+
+.card_content:hover {
+  transform: scale(1.03);
+  transition-duration: 0.24s;
+}
