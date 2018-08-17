@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 /* Padding */
 
 .page-padding--left {
@@ -148,35 +150,6 @@
   text-align: center;
 }
 
-/* Buttons */
-.btn {
-  border: 0;
-  padding: 0;
-  margin: 0;
-  background: none;
-  color: inherit;
-}
-
-.btn:focus {
-  outline: none;
-}
-
-.btn--menu {
-  position: absolute;
-  top: 3vw;
-  right: 7vw;
-  color: #939391;
-  pointer-events: visible;
-}
-
-.btn--close {
-  position: absolute;
-  top: 3vw;
-  right: 7vw;
-  font-size: 0.75em;
-  z-index: 100;
-}
-
 @media screen and (max-width: 50em) {
   .content--full {
     min-height: 0;
@@ -215,15 +188,15 @@
 
 /* Section certified*/
 .section-certified {
-  background: #fd8a8b;
-  color: #2e3471;
+  background: $pizazz;
+  color: $canary;
   padding: 0 7vw;
 }
 
 /* Section bounty */
 .section-bounty {
-  background: #c3dae5;
-  color: #2e3471;
+  background: $salomie;
+  color: $burntSienna;
 }
 
 .bounty-grid {
@@ -259,20 +232,20 @@
 }
 
 .box--a {
-  background: #e2f0f6;
+  background: $canary;
 }
 
 .box--b {
-  background: #c3dae5;
+  background: $salomie;
 }
 
 .box--c {
-  background: #2f3471c7;
+  background: lighten($burntSienna, 7%);
   color: #fff;
 }
 
 .box--d {
-  background: #e2eff5;
+  background: $canary;
 }
 
 .bounty-project {
@@ -304,13 +277,13 @@
 
 .link-item {
   font-size: 20px;
-  color: #fd8a8b;
+  color: $pizazz;
   cursor: pointer;
 }
 
 /* footer */
 footer {
-  background: #bbd5e1;
+  background: darken($pizazz, 7%);
   display: flex !important;
   justify-content: space-between;
   align-items: center;

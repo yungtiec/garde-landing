@@ -4,13 +4,14 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Garde - Transparency Network</title>
-		<meta name="description" content="A little library that can be used for creating WebGL powered distortion hover effects using displacement images." />
+		<meta name="description" content="provides a new framework that makes it easier to evaluate the quality of a project’s disclosures." />
 		<meta name="keywords" content="garde, cryptocurrency, ico, transparency, consensys, ethereum, token" />
 		<meta name="author" content="Codrops" />
 		<link rel="shortcut icon" href="favicon.ico">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
      <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="css/content.css" />
 		<link rel="stylesheet" type="text/css" href="css/revealer.css" />
 		<link rel="stylesheet" type="text/css" href="css/pater.css" />
@@ -24,7 +25,7 @@
 			<section class="landing-grid">
 				<div class="landing-grid__item landing-grid--left">
 					<div class="landing-grid__item-content">
-						<img src="img/logo-4.png" alt="GARDE" width="170px" height="auto" />
+						<img src="img/logo-orange.png" alt="GARDE" width="170px" height="auto" />
 						<div class="landing-grid__item-intro">
 							<h3 class="landing-grid__item-subtitle">Token buyers are losing patience with poor and deceptive disclosures.
 							</h3>
@@ -40,7 +41,7 @@
 				</div>
 				<div class="landing-grid__item landing-grid__item--bg landing-grid--right">
 					<div class="landing-grid__item-img" data-displacement="img/displacement/10.jpg" data-intensity="-0.65" data-speedIn="1.2" data-speedOut="1.2">
-						<img src="img/scott-webb-272211-unsplash.jpg" alt="Image"/>
+						<img src="img/kimon-maritz-183501-unsplash.jpg" alt="Image"/>
 						<img src="img/daniel-von-appen-276283-unsplash.jpg" alt="Image"/>
 					</div>
 					<div class="landing-grid__item-content">
@@ -55,6 +56,23 @@
 						</nav>
 						<button class="btn btn--menu"><i class="material-icons">menu</i></button>
 					</div>
+				</div>
+			</section>
+			<section class="landing-mobile">
+				<div class="nav-mobile page-padding-x">
+					<a href="" target="_blank">
+						<img src="img/logo-4.png" alt="GARDE" width="170px" height="auto" />
+					</a>
+					<nav class="menu-mobile">
+						<button class="btn btn-mobile--close"><i class="material-icons">close</i></button>
+						<ul class="menu-mobile__inner" id="menu-mobile__inner">
+							<li class="menu-mobile__item"><a class="menu-mobile__link" href="#">get certified</a></li>
+							<li class="menu-mobile__item"><a class="menu-mobile__link" href="#">earn bounty</a></li>
+							<li class="menu-mobile__item"><a class="menu-mobile__link" href="#">view listing</a></li>
+							<li class="menu-mobile__item"><a class="menu-mobile__link" href="#">search</a></li>
+						</ul>
+					</nav>
+					<button class="btn btn-mobile--menu"><i class="material-icons">menu</i></button>
 				</div>
 			</section>
 			<section class="content content--full flexy section-certified" id="section-certified">
@@ -138,12 +156,12 @@
 				</ul>
 				<a class="link-item">View more ></a>
 			</section>
-			<section  class="page-padding-x page-padding-bottom">
-				<p class="">The Garde Network is an initiative by The Brooklyn Project</p>
-			</section>
 		</main>
 		<footer class="page-padding">
-			<div>Copyright © 2018 Garde Network</div>
+			<div>
+				<p class="">The Garde Network is an initiative by The Brooklyn Project</p>
+				Copyright © 2018 Garde Network
+			</div>
 			<div class="logos">
 				<a  target="_blank" href="https://thebkp.com/"><img class="bkp-logo" src="img/bkp-logo.png" alt="the brooklyn project" /></a>
 				<a  target="_blank" href="http://www.consensys.net/"><img class="consensys-logo" src="img/consensys-logo-white-transparent.png" alt="consensys" /></a>
@@ -177,19 +195,29 @@
 			});
 
 		(function() {
-			// Fake loading.
+
+			var salomie =  "#fcd98d";
+			var pizazz =  "#ffa544";
+			var burntSienna =  "#EC6C5A";
+			var iceberg =  "#e3f0f6";
+			var botticelli =  "#90cef6";
+			var kashmirBlue =  "#505a89";
+			var funBlue =  "#184993";
+
 			setTimeout(init, 2000);
 
 			function init() {
 				document.getElementById("menu__inner").style.display = "flex"
+				document.getElementById("menu-mobile__inner").style.display = "flex"
 
 				var navEl = document.querySelector('nav.menu'),
 				revealer = new RevealFx(navEl),
 				closeCtrl = navEl.querySelector('.btn--close');
 
 				document.querySelector('.btn--menu').addEventListener('click', function() {
+					console.log('clicked')
 					revealer.reveal({
-						bgcolor: '#2e3471',
+						bgcolor: burntSienna,
 						duration: 400,
 						easing: 'easeInOutCubic',
 						onCover: function(contentEl, revealerEl) {
@@ -206,11 +234,45 @@
 					closeCtrl.removeEventListener('click', closeMenu);
 					navEl.classList.remove('menu--open');
 					revealer.reveal({
-						bgcolor: '#2e3471',
+						bgcolor: burntSienna,
 						duration: 400,
 						easing: 'easeInOutCubic',
 						onCover: function(contentEl, revealerEl) {
 							navEl.classList.remove('menu--open');
+							contentEl.style.opacity = 0;
+						}
+					});
+				}
+
+				var mobileNavEl = document.querySelector('nav.menu-mobile'),
+				mobileRevealer = new RevealFx(mobileNavEl),
+				mobileCloseCtrl = mobileNavEl.querySelector('.btn-mobile--close');
+
+				document.querySelector('.btn-mobile--menu').addEventListener('click', function() {
+					console.log('clicked')
+					mobileRevealer.reveal({
+						bgcolor: burntSienna,
+						duration: 400,
+						easing: 'easeInOutCubic',
+						onCover: function(contentEl, revealerEl) {
+							mobileNavEl.classList.add('menu-mobile--open');
+							contentEl.style.opacity = 1;
+						},
+						onComplete: function() {
+							mobileCloseCtrl.addEventListener('click', closeMobileMenu);
+						}
+					});
+				});
+
+				function closeMobileMenu() {
+					mobileCloseCtrl.removeEventListener('click', closeMobileMenu);
+					mobileNavEl.classList.remove('menu-mobile--open');
+					mobileRevealer.reveal({
+						bgcolor: burntSienna,
+						duration: 400,
+						easing: 'easeInOutCubic',
+						onCover: function(contentEl, revealerEl) {
+							mobileNavEl.classList.remove('menu-mobile--open');
 							contentEl.style.opacity = 0;
 						}
 					});
@@ -224,13 +286,15 @@
 						}
 					});
 
+
+
 				//************************ Example 2 - reveal on scroll ********************************
 
 				var scrollElemToWatch_1 = document.getElementById('rev-4'),
 					watcher_1 = scrollMonitor.create(scrollElemToWatch_1, -300),
 					rev4 = new RevealFx(scrollElemToWatch_1, {
 						revealSettings : {
-							bgcolor: '#ec6a6b',
+							bgcolor: burntSienna,
 							direction: 'rl',
 							onCover: function(contentEl, revealerEl) {
 								contentEl.style.opacity = 1;
@@ -239,7 +303,7 @@
 					}),
 					rev5 = new RevealFx(document.querySelector('#rev-5'), {
 						revealSettings : {
-							bgcolor: '#ec6a6b',
+							bgcolor: burntSienna,
 							delay: 200,
 							onCover: function(contentEl, revealerEl) {
 								contentEl.style.opacity = 1;
@@ -251,7 +315,7 @@
 					watcher_2 = scrollMonitor.create(scrollElemToWatch_2),
 					boxA = new RevealFx(document.querySelector('#box--a'), {
 						revealSettings : {
-							bgcolor: '#a9d1e4',
+							bgcolor: salomie,
 							onCover: function(contentEl, revealerEl) {
 								contentEl.style.opacity = 1;
 							}
@@ -259,7 +323,7 @@
 					}),
 					boxB = new RevealFx(document.querySelector('#box--b'), {
 						revealSettings : {
-							bgcolor: '#2f3471c7',
+							bgcolor: pizazz,
 							delay: 200,
 							onCover: function(contentEl, revealerEl) {
 								contentEl.style.opacity = 1;
@@ -268,7 +332,7 @@
 					}),
 					boxC = new RevealFx(document.querySelector('#box--c'), {
 						revealSettings : {
-							bgcolor: '#32396e',
+							bgcolor: burntSienna,
 							onCover: function(contentEl, revealerEl) {
 								contentEl.style.opacity = 1;
 							}
@@ -276,7 +340,7 @@
 					}),
 					boxD = new RevealFx(document.querySelector('#box--d'), {
 						revealSettings : {
-							bgcolor: '#a9d1e4',
+							bgcolor: salomie,
 							delay: 200,
 							onCover: function(contentEl, revealerEl) {
 								contentEl.style.opacity = 1;
