@@ -42,13 +42,12 @@
 						<img src="img/daniel-von-appen-276283-unsplash.jpg" alt="Image"/>
 					</div>
 					<div class="landing-grid__item-content">
-						<nav class="menu">
+						<nav class="menu" id="mainNav">
 							<button class="btn-nav btn--close"><i class="material-icons">close</i></button>
 							<ul class="menu__inner" id="menu__inner">
-								<li class="menu__item"><a class="menu__link" href="#">get certified</a></li>
-								<li class="menu__item"><a class="menu__link" href="#">earn bounty</a></li>
-								<li class="menu__item"><a class="menu__link" href="#">view listing</a></li>
-								<li class="menu__item"><a class="menu__link" href="#">search</a></li>
+								<li class="menu__item" scroll-to="#section-certified"><a class="menu__link">get certified</a></li>
+								<li class="menu__item" scroll-to="#section-bounty"><a class="menu__link">earn bounty</a></li>
+								<li class="menu__item" scroll-to="#section-listing"><a class="menu__link">search scorecards</a></li>
 							</ul>
 						</nav>
 						<button class="btn-nav btn--menu"><i class="material-icons">menu</i></button>
@@ -60,13 +59,12 @@
 					<a href="" target="_blank">
 						<img src="img/logo-orange.png" class="logo-mobile" alt="GARDE" width="130px" height="auto" />
 					</a>
-					<nav class="menu-mobile">
+					<nav class="menu-mobile" id="mainNav">
 						<button class="btn-nav btn-mobile--close"><i class="material-icons">close</i></button>
 						<ul class="menu-mobile__inner" id="menu-mobile__inner">
-							<li class="menu-mobile__item"><a class="menu-mobile__link" href="#">get certified</a></li>
-							<li class="menu-mobile__item"><a class="menu-mobile__link" href="#">earn bounty</a></li>
-							<li class="menu-mobile__item"><a class="menu-mobile__link" href="#">view listing</a></li>
-							<li class="menu-mobile__item"><a class="menu-mobile__link" href="#">search</a></li>
+							<li class="menu-mobile__item" scroll-to="#section-certified"><a class="menu-mobile__link">get certified</a></li>
+							<li class="menu-mobile__item" scroll-to="#section-bounty"><a class="menu-mobile__link">earn bounty</a></li>
+							<li class="menu-mobile__item" scroll-to="#section-listing"><a class="menu-mobile__link">search scorecards</a></li>
 						</ul>
 					</nav>
 					<button class="btn-nav btn-mobile--menu"><i class="material-icons">menu</i></button>
@@ -87,7 +85,7 @@
 					<button class="btn btn-garde-secondary" id="btn-get-certified">get certify now</button>
 				</h2>
 			</section>
-			<section class="content flexy section-bounty bounty-grid">
+			<section class="content flexy section-bounty bounty-grid" id="section-bounty">
 				<div class="bounty-box page-padding--left">
 					<h2 class="content__title content__title--small">
 						<div class="content__description">limited time only</div>
@@ -127,7 +125,7 @@
 			</section>
 			<section class="content flexy section-listing page-padding" id="section-listing">
 				<h2 class="content__title content__title--small">
-					<div class="content__title__inner">VIEW SCORECARDS</div>
+					<div class="content__title__inner">SEARCH SCORECARDS</div>
 					<div id="rev-9" class="content__paragraph full-width">Educate yourself on tokens before buying them. What should one look for?<br/>We provide a new framework that makes it easier to evaluate the quality of a project’s disclosures.</div>
 				</h2>
 				<form class="search-container">
@@ -182,6 +180,13 @@
 		<script src="js/hover.js"></script>
 		<script src="js/anime.min.js"></script>
 		<script src="js/scrollMonitor.js"></script>
+
+
+		<!-- Bootstrap core JavaScript -->
+	  <script src="js/jquery.min.js"></script>
+
+	  <!-- Plugin JavaScript -->
+	  <script src="js/jquery.easing.min.js"></script>
 		<script src="js/main.js"></script>
 		<script>
 			imagesLoaded( document.querySelectorAll('img'), () => {
@@ -261,7 +266,6 @@
 				mobileCloseCtrl = mobileNavEl.querySelector('.btn-mobile--close');
 
 				document.querySelector('.btn-mobile--menu').addEventListener('click', function() {
-					console.log('clicked')
 					mobileRevealer.reveal({
 						bgcolor: funBlue,
 						duration: 400,
@@ -297,6 +301,26 @@
 							closeMenu()
 						}
 					});
+
+				$('.menu__item').on('click', function (e) {
+				    var targetSec = $(this).attr('scroll-to');
+				    $('html, body').animate({
+				        scrollTop: $(targetSec).offset().top
+				    }, 300);
+				    if (navEl.classList.contains('menu--open')) {
+							closeMenu()
+						}
+				});
+
+				$('.menu-mobile__item').on('click', function (e) {
+				    var targetSec = $(this).attr('scroll-to');
+				    $('html, body').animate({
+				        scrollTop: $(targetSec).offset().top
+				    }, 300);
+				    if (mobileNavEl.classList.contains('menu-mobile--open')) {
+							closeMobileMenu()
+						}
+				});
 
 
 
