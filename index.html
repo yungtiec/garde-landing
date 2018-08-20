@@ -10,13 +10,14 @@
 		<link rel="shortcut icon" href="favicon.ico">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="css/content.css" />
 		<link rel="stylesheet" type="text/css" href="css/revealer.css" />
 		<link rel="stylesheet" type="text/css" href="css/pater.css" />
 		<link rel="stylesheet" type="text/css" href="css/landing.css" />
 		<link rel="stylesheet" type="text/css" href="css/card.css" />
+		<link rel="stylesheet" type="text/css" href="css/button.css" />
 		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
 	</head>
 	<body class="loading">
@@ -31,11 +32,7 @@
 							</h3>
 							<h3 class="landing-grid__item-subtitle">A decentralized network of Gardians who support innovators and protect consumers by improving transparency.
 							</h3>
-							<form class="search-container">
-						    <input type="text" id="search-bar" placeholder="Find project scorecard">
-						    <a href="#"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
-						  </form>
-
+							<button class="btn btn-garde-primary-outline">Become a Gardian</button>
 						</div>
 					</div>
 				</div>
@@ -46,7 +43,7 @@
 					</div>
 					<div class="landing-grid__item-content">
 						<nav class="menu">
-							<button class="btn btn--close"><i class="material-icons">close</i></button>
+							<button class="btn-nav btn--close"><i class="material-icons">close</i></button>
 							<ul class="menu__inner" id="menu__inner">
 								<li class="menu__item"><a class="menu__link" href="#">get certified</a></li>
 								<li class="menu__item"><a class="menu__link" href="#">earn bounty</a></li>
@@ -54,17 +51,17 @@
 								<li class="menu__item"><a class="menu__link" href="#">search</a></li>
 							</ul>
 						</nav>
-						<button class="btn btn--menu"><i class="material-icons">menu</i></button>
+						<button class="btn-nav btn--menu"><i class="material-icons">menu</i></button>
 					</div>
 				</div>
 			</section>
 			<section class="landing-mobile">
 				<div class="nav-mobile page-padding-x">
 					<a href="" target="_blank">
-						<img src="img/logo-4.png" alt="GARDE" width="170px" height="auto" />
+						<img src="img/logo-orange.png" class="logo-mobile" alt="GARDE" width="130px" height="auto" />
 					</a>
 					<nav class="menu-mobile">
-						<button class="btn btn-mobile--close"><i class="material-icons">close</i></button>
+						<button class="btn-nav btn-mobile--close"><i class="material-icons">close</i></button>
 						<ul class="menu-mobile__inner" id="menu-mobile__inner">
 							<li class="menu-mobile__item"><a class="menu-mobile__link" href="#">get certified</a></li>
 							<li class="menu-mobile__item"><a class="menu-mobile__link" href="#">earn bounty</a></li>
@@ -72,7 +69,14 @@
 							<li class="menu-mobile__item"><a class="menu-mobile__link" href="#">search</a></li>
 						</ul>
 					</nav>
-					<button class="btn btn-mobile--menu"><i class="material-icons">menu</i></button>
+					<button class="btn-nav btn-mobile--menu"><i class="material-icons">menu</i></button>
+				</div>
+				<div class="landing-grid__item-intro">
+					<h3 class="landing-grid__item-title">Making public blockchains safe.
+					</h3>
+					<h3 class="landing-grid__item-subtitle">A decentralized network of Gardians who support innovators and protect consumers by improving transparency.
+					</h3>
+					<button class="btn btn-garde-primary-outline">Become a Gardian</button>
 				</div>
 			</section>
 			<section class="content content--full flexy section-certified" id="section-certified">
@@ -80,6 +84,7 @@
 					<div id="rev-4" class="content__description">certify your disclosures</div>
 					<div class="content__title__inner">COMMIT TO TRANSPARENCY</div>
 					<div id="rev-5" class="content__paragraph">Transparency is the bedrock of a healthy crypto ecosystem. With Garde, token projects can leverage a community of experts to certify the quality and reliability of their disclosures. </div>
+					<button class="btn btn-garde-secondary" id="btn-get-certified">get certify now</button>
 				</h2>
 			</section>
 			<section class="content flexy section-bounty bounty-grid">
@@ -125,8 +130,12 @@
 					<div class="content__title__inner">VIEW SCORECARDS</div>
 					<div id="rev-9" class="content__paragraph full-width">Educate yourself on tokens before buying them. What should one look for?<br/>We provide a new framework that makes it easier to evaluate the quality of a project’s disclosures.</div>
 				</h2>
+				<form class="search-container">
+			    <input type="text" id="search-bar" placeholder="Find project scorecard">
+			    <a href="#"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
+			  </form>
 				<ul class="cards">
-					<li class="cards_item">
+					<li class="cards-item">
 						<div class="card">
 							<div class="card_content">
 								<div class="bounty-project">Civic</div>
@@ -135,7 +144,7 @@
 							</div>
 						</div>
 					</li>
-					<li class="cards_item">
+					<li class="cards-item">
 						<div class="card">
 							<div class="card_content">
 								<div class="bounty-project">virtue poker</div>
@@ -144,7 +153,7 @@
 							</div>
 						</div>
 					</li>
-					<li class="cards_item">
+					<li class="cards-item cards-item--last">
 						<div class="card">
 							<div class="card_content">
 								<div class="bounty-project">ethereum</div>
@@ -313,6 +322,16 @@
 							}
 						}
 					}),
+					btnGetCertified = new RevealFx(document.querySelector('#btn-get-certified'), {
+						revealSettings : {
+							bgcolor: funBlue,
+							delay: 200,
+							onCover: function(contentEl, revealerEl) {
+								contentEl.style.opacity = 1;
+
+							}
+						}
+					}),
 
 					scrollElemToWatch_2 = document.getElementById('rev-7'),
 					watcher_2 = scrollMonitor.create(scrollElemToWatch_2),
@@ -367,6 +386,7 @@
 					// rev3.reveal();
 					rev4.reveal();
 					rev5.reveal();
+					btnGetCertified.reveal();
 					watcher_1.destroy();
 				});
 				watcher_2.enterViewport(function() {

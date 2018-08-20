@@ -13,10 +13,10 @@ $card-radius: 0;
   margin-bottom: 30px;
 }
 
-.cards_item {
+.cards-item {
   width: 100%;
   height: 270px;
-  margin-right: 10px;
+  margin-right: 2%;
   margin-bottom: 10px;
   cursor: pointer;
   display: flex;
@@ -41,8 +41,16 @@ $card-radius: 0;
     }
   }
 
+  @media all and (max-width: 671px) {
+    margin-right: 0px;
+  }
+
   border: $card-border-width solid $card-border-color;
   border-radius: $card-radius;
+}
+
+.cards-item--last {
+  margin-right: 0px;
 }
 
 .card {
@@ -73,10 +81,7 @@ $card-radius: 0;
   p {
     flex: 1 0 auto;
   }
-  .bounty-action {
-    position: absolute;
-    bottom: 0px;
-  }
+
 }
 
 .card_content:hover {
