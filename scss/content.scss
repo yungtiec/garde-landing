@@ -189,14 +189,14 @@
 /* Section certified*/
 .section-certified {
   background: $pizazz;
-  color: $canary;
+  color: $fun-blue;
   padding: 0 7vw;
 }
 
 /* Section bounty */
 .section-bounty {
   background: $salomie;
-  color: $burntSienna;
+  color: $fun-blue;
 }
 
 .bounty-grid {
@@ -240,8 +240,7 @@
 }
 
 .box--c {
-  background: lighten($burntSienna, 7%);
-  color: #fff;
+  background: lighten($pizazz, 7%);
 }
 
 .box--d {

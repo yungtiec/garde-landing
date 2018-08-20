@@ -186,14 +186,14 @@
 /* Section certified*/
 .section-certified {
   background: #ffa544;
-  color: #fffdc4;
+  color: #3051ce;
   padding: 0 7vw;
 }
 
 /* Section bounty */
 .section-bounty {
   background: #fcd98d;
-  color: #EC6C5A;
+  color: #3051ce;
 }
 
 .bounty-grid {
@@ -236,8 +236,7 @@
 }
 
 .box--c {
-  background: #f0897a;
-  color: #fff;
+  background: #ffb668;
 }
 
 .box--d {

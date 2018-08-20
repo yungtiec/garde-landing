@@ -27,9 +27,9 @@
 					<div class="landing-grid__item-content">
 						<img src="img/logo-orange.png" alt="GARDE" width="170px" height="auto" />
 						<div class="landing-grid__item-intro">
-							<h3 class="landing-grid__item-subtitle">Token buyers are losing patience with poor and deceptive disclosures.
+							<h3 class="landing-grid__item-title">Making public blockchains safe.
 							</h3>
-							<h3 class="landing-grid__item-subtitle">Garde Network offers projects a way to certify their disclosures and protect their customers.
+							<h3 class="landing-grid__item-subtitle">A decentralized network of Gardians who support innovators and protect consumers by improving transparency.
 							</h3>
 							<form class="search-container">
 						    <input type="text" id="search-bar" placeholder="Find project scorecard">
@@ -196,13 +196,16 @@
 
 		(function() {
 
+			var canary = "#fffdc4"
+			var pizazz = "#ffa544";
 			var salomie =  "#fcd98d";
 			var pizazz =  "#ffa544";
+			var lightPizazz = "#ffb668"
 			var burntSienna =  "#EC6C5A";
 			var iceberg =  "#e3f0f6";
 			var botticelli =  "#90cef6";
 			var kashmirBlue =  "#505a89";
-			var funBlue =  "#184993";
+			var funBlue =  "#3051ce";
 
 			setTimeout(init, 2000);
 
@@ -217,7 +220,7 @@
 				document.querySelector('.btn--menu').addEventListener('click', function() {
 					console.log('clicked')
 					revealer.reveal({
-						bgcolor: burntSienna,
+						bgcolor: funBlue,
 						duration: 400,
 						easing: 'easeInOutCubic',
 						onCover: function(contentEl, revealerEl) {
@@ -234,7 +237,7 @@
 					closeCtrl.removeEventListener('click', closeMenu);
 					navEl.classList.remove('menu--open');
 					revealer.reveal({
-						bgcolor: burntSienna,
+						bgcolor: funBlue,
 						duration: 400,
 						easing: 'easeInOutCubic',
 						onCover: function(contentEl, revealerEl) {
@@ -251,7 +254,7 @@
 				document.querySelector('.btn-mobile--menu').addEventListener('click', function() {
 					console.log('clicked')
 					mobileRevealer.reveal({
-						bgcolor: burntSienna,
+						bgcolor: funBlue,
 						duration: 400,
 						easing: 'easeInOutCubic',
 						onCover: function(contentEl, revealerEl) {
@@ -268,7 +271,7 @@
 					mobileCloseCtrl.removeEventListener('click', closeMobileMenu);
 					mobileNavEl.classList.remove('menu-mobile--open');
 					mobileRevealer.reveal({
-						bgcolor: burntSienna,
+						bgcolor: funBlue,
 						duration: 400,
 						easing: 'easeInOutCubic',
 						onCover: function(contentEl, revealerEl) {
@@ -294,7 +297,7 @@
 					watcher_1 = scrollMonitor.create(scrollElemToWatch_1, -300),
 					rev4 = new RevealFx(scrollElemToWatch_1, {
 						revealSettings : {
-							bgcolor: burntSienna,
+							bgcolor: funBlue,
 							direction: 'rl',
 							onCover: function(contentEl, revealerEl) {
 								contentEl.style.opacity = 1;
@@ -303,7 +306,7 @@
 					}),
 					rev5 = new RevealFx(document.querySelector('#rev-5'), {
 						revealSettings : {
-							bgcolor: burntSienna,
+							bgcolor: funBlue,
 							delay: 200,
 							onCover: function(contentEl, revealerEl) {
 								contentEl.style.opacity = 1;
@@ -315,7 +318,7 @@
 					watcher_2 = scrollMonitor.create(scrollElemToWatch_2),
 					boxA = new RevealFx(document.querySelector('#box--a'), {
 						revealSettings : {
-							bgcolor: salomie,
+							bgcolor: lightPizazz,
 							onCover: function(contentEl, revealerEl) {
 								contentEl.style.opacity = 1;
 							}
@@ -323,7 +326,7 @@
 					}),
 					boxB = new RevealFx(document.querySelector('#box--b'), {
 						revealSettings : {
-							bgcolor: pizazz,
+							bgcolor: canary,
 							delay: 200,
 							onCover: function(contentEl, revealerEl) {
 								contentEl.style.opacity = 1;
@@ -332,7 +335,7 @@
 					}),
 					boxC = new RevealFx(document.querySelector('#box--c'), {
 						revealSettings : {
-							bgcolor: burntSienna,
+							bgcolor: funBlue,
 							onCover: function(contentEl, revealerEl) {
 								contentEl.style.opacity = 1;
 							}
@@ -340,7 +343,7 @@
 					}),
 					boxD = new RevealFx(document.querySelector('#box--d'), {
 						revealSettings : {
-							bgcolor: salomie,
+							bgcolor: lightPizazz,
 							delay: 200,
 							onCover: function(contentEl, revealerEl) {
 								contentEl.style.opacity = 1;
@@ -352,7 +355,7 @@
 					watcher_3 = scrollMonitor.create(scrollElemToWatch_3, -300),
 					rev9 = new RevealFx(document.querySelector('#rev-9'), {
 						revealSettings : {
-							bgcolor: '#fd8a8b',
+							bgcolor: pizazz,
 							delay: 200,
 							onCover: function(contentEl, revealerEl) {
 								contentEl.style.opacity = 1;
