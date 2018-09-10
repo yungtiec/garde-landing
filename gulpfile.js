@@ -38,7 +38,10 @@ gulp.task('js:minify', function() {
   return gulp.src([
       './js/*.js',
       '!./js/*.min.js',
-      '!./js/hover.js'
+      '!./js/*.*.min.js',
+      '!./js/hover.js',
+      '!./js/anime.min.js',
+      '!./js/main-content.js'
     ])
     .pipe(uglify())
     .pipe(rename({
