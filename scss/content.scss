@@ -186,6 +186,12 @@
   }
 }
 
+@media all and (max-width: 992px) {
+  .content__paragraph {
+    font-size: 16px;
+  }
+}
+
 @media all and (max-width: 768px) {
   .content--full {
     height: 70vh;
