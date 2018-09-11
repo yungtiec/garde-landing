@@ -190,8 +190,10 @@
     text-align: center;
   }
   .content__paragraph {
-    margin: 25px auto;
+    margin-bottom: 5px !important;
     text-align: left;
+    padding: 15px 3rem;
+    width: 100%;
   }
 }
 
