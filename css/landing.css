@@ -326,7 +326,8 @@ main {
 }
 
 .menu__item {
-  padding: 0.15em;
+  padding: 1rem 0.15em;
+  width: 100%;
 }
 
 .js .menu__item {
@@ -354,7 +355,7 @@ main {
 }
 
 .menu .menu__link {
-  font-size: 2.5vw;
+  font-size: 2vw;
   line-height: 1.5;
   color: var(--item-link);
   font-weight: bold;
@@ -529,7 +530,8 @@ main {
     align-items: flex-end;
   }
   .menu-mobile__item {
-    padding: 0.15em;
+    padding: 0.8rem 0.15em;
+    width: 100%;
   }
   .js .menu-mobile__item {
     transform: translate3d(-13em, 0, 0);
@@ -552,7 +554,7 @@ main {
   }
   .menu-mobile .menu-mobile__link {
     font-size: 6.5vw;
-    line-height: 1.5;
+    line-height: 1.2;
     color: var(--item-link);
     font-weight: bold;
   }

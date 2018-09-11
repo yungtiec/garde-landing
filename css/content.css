@@ -191,22 +191,23 @@
   }
   .content__paragraph {
     margin: 25px auto;
+    text-align: left;
   }
 }
 
 /* Section certified*/
-.section-certified {
+.section-how-it-works {
   background: #ffa544;
   color: #3051ce;
   padding: 9vw 7vw;
 }
 
-.section-certified .content__paragraph {
+.section-how-it-works .content__paragraph {
   margin-bottom: 40px;
 }
 
 /* Section bounty */
-.section-bounty {
+.section-get-involved {
   background: #fcd98d;
   color: #3051ce;
 }
@@ -292,7 +293,7 @@
     letter-spacing: 0.1rem;
     font-weight: 300;
   }
-  .section-bounty .bounty-description {
+  .section-get-involved .bounty-description {
     font-size: 18px;
     margin-bottom: 45%;
     height: 90px;
