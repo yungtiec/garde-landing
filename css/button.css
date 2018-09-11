@@ -57,9 +57,47 @@
   border-color: #ffa544;
 }
 
+.btn--inline-flex {
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-align-content: center;
+  align-content: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+}
+
 @media screen and (max-width: 992px) {
   .btn-center--mobile {
     display: block;
     margin: 50px auto !important;
   }
+}
+
+.scroll-link,
+.scroll-link::after {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.scroll-link {
+  background: none;
+  cursor: pointer;
+  color: inherit;
+  display: block;
+}
+
+.scroll-link:hover {
+  color: inherit;
+  letter-spacing: 1px;
 }
