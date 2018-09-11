@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 .main-content {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -156,7 +158,7 @@ button:focus {
 .section__gardecard {
   width: 80%;
   height: 100px;
-  background: #fcd98d;
+  background: rgb(252, 217, 141);
   margin-left: 7%;
   -webkit-box-shadow: 30px 25px 0px 3px #ffa545;
   -moz-box-shadow: 30px 25px 0px 3px #ffa545;
@@ -198,7 +200,7 @@ button:focus {
     overflow: hidden;
     position: relative;
     width: 50%;
-    background: #3051ce;
+    background: rgb(48, 81, 206);
   }
   .section {
     top: 0;
@@ -209,7 +211,7 @@ button:focus {
     overflow: hidden;
     position: relative;
     width: 50%;
-    background: #3051ce;
+    background: rgb(48, 81, 206);
   }
   .section__content {
     height: 100vh;

@@ -55,3 +55,18 @@
   color: #fff;
   border-color: #3051ce;
 }
+
+.btn-garde-outline {
+  border: 1px solid #fff;
+  border-radius: 2px;
+  padding: 16px 15px;
+  background-color: transparent;
+  color: #fff;
+}
+
+.btn-garde-outline:hover {
+  opacity: 1;
+  background-color: #ffa544;
+  color: #fff;
+  border-color: #ffa544;
+}
