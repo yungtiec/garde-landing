@@ -219,9 +219,13 @@
   grid-template-columns: repeat(2, 50%);
 }
 
-.bounty-box,
+.bounty-box {
+  padding: 7vw 4rem 7vw 6rem;
+}
+
 .bounty-box--inner {
-  padding: calc(40px + 20 * (100vw - 1024px) / 456) calc(40px + 20 * (100vw - 1024px) / 456);
+  padding: calc(40px + 20 * (100vw - 1024px) / 456)
+    calc(40px + 20 * (100vw - 1024px) / 456);
 }
 
 .bounty__inner-grid {
@@ -324,7 +328,9 @@
   .bounty-grid {
     display: block;
   }
-  .bounty-box,
+  .bounty-box {
+    padding: 35px 3rem;
+  }
   .bounty-box--inner {
     padding: 35px;
   }
